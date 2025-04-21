@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+                            /*Header*/                             
+header, footer {
+    padding: 10px 0 10px 0;
+    color: #D952FF;
+    background: linear-gradient(165deg, #818181, #A8A7A7, #C0C0C0);
+    text-align: center;
+    font-size: .9em;
+}
+#navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    padding: 0 0 5px 0;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#navLinks a:hover {
+    color: #F96790;
+    text-decoration: underline;
+}
+#navLinks a{
+    text-decoration: none;
+}
+.active{ 
+    color: #007bff; 
+    text-decoration: underline !important;
+}
+
+
+
+
+
+
+
+                            /*Body*/                             
+main{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #7594FF, #3141C3, #BD77B8);
+}
+
+                        /*index.html*/                           
+#hero{
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #DEAAF9, #4F6DFF);
+}
+#hero h1, #hero p{
+    animation: fadeIn 1s ease-in-out;
+}
+#hero h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+#hero p{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #434343;
+}
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btn{
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #0056b3;
+}
+.info{
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+.info h1{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.info p{
+  font-size: 1.1em;
+  color: #2E2E2E;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+                        /* Footer styles */                      
+footer > p{
+    margin: 5px;
+    font-size: .9rem;
+}
+
+footer div i{
+    font-size: 1.5rem;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+#git{
+    color: #2A2A2A;
+}
+#insta{
+    color: #CC82FF;
+}
+#youtube{
+    color: #BF2121;
+}
+
+
+
+
+
+                        /* Responsive styles */                 
+@media (max-width: 768px) {
+    .menu-toggle{
+        display: block;
+    }
+    #navLinks{
+        display: flex;
+        flex-direction: column; 
+        font-size: 1.1em;
+        gap: 10px;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    #navLinks.show{
+        opacity: 1;
+        max-height: 450px;
+    }
+    #navContainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+}
+
+
+
