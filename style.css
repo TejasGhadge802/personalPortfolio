@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+                            /* All */                              
                             /*Header*/                             
 header, footer {
     padding: 10px 0 10px 0;
@@ -55,6 +55,74 @@ main{
     font-family: Arial, sans-serif;
     background: linear-gradient(120deg, #7594FF, #3141C3, #BD77B8);
 }
+body{
+    background: linear-gradient(120deg, #7594FF, #3141C3, #BD77B8)
+}
+
+
+
+
+
+                        /* Footer styles */                      
+footer > p{
+    margin: 5px;
+    font-size: .9rem;
+    color: #742FFF;
+}
+
+footer div i{
+    font-size: 1.5rem;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+#git{
+    color: #2A2A2A;
+}
+#insta{
+    color: #A82CFF;
+}
+#youtube{
+    color: #BF2121;
+}
+
+
+
+
+
+                        /* Responsive styles */                   
+
+@media (max-width: 768px) {
+    .menu-toggle{
+        display: block;
+    }
+    #navLinks{
+        display: flex;
+        flex-direction: column; 
+        font-size: 1.1em;
+        gap: 10px;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    #navLinks.show{
+        opacity: 1;
+        max-height: 450px;
+    }
+    #navContainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+}
+
+
+
+
 
                         /*index.html*/                           
 #hero{
@@ -116,62 +184,136 @@ main{
 
 
 
+                        /* me.html styles */                       
 
-
-                        /* Footer styles */                      
-footer > p{
-    margin: 5px;
-    font-size: .9rem;
+.profile-pic{
+    height: 150px;
+    margin: 10px 20px;
 }
-
-footer div i{
-    font-size: 1.5rem;
-}
-
-#links{
+.meContainer {
     display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-#git{
-    color: #2A2A2A;
+.meText{
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+  text-align: left;
 }
-#insta{
-    color: #CC82FF;
+.meText p{
+    font-size: 1.8rem;
+    margin: 10px 0 20px 0;
 }
-#youtube{
-    color: #BF2121;
+#meH1{
+  font-family: monospace;
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  animation: type 3s steps(15) forwards, 
+  blink 0.5s step-end infinite;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
 }
-
-
-
-
-
-                        /* Responsive styles */                 
-@media (max-width: 768px) {
-    .menu-toggle{
-        display: block;
+@keyframes type{
+    from{
+        width: 0;
     }
-    #navLinks{
-        display: flex;
-        flex-direction: column; 
-        font-size: 1.1em;
-        gap: 10px;
-        opacity: 0;
-        max-height: 0;
-        transition: all 0.2s ease-in-out;
+    to{
+        width: 100%;
     }
-    #navLinks.show{
-        opacity: 1;
-        max-height: 450px;
-    }
-    #navContainer{
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 30px;
-    }
+}
+@keyframes blink{
+  0%, 100%{ 
+      border-color: black;
+  }
+  50%{ 
+      border-color: transparent;
+  }
+}
+
+.meText ul{
+    list-style: none;
+    margin: 10px 0 20px 0;
+}
+.meText li{
+    font-size: 1.2rem;
+}
+.meText ul li i{
+    color: #FD4D4D;
+}
+
+
+@media screen and (max-width: 600px) {
+  .meContainer {
+    flex-direction: row;
+    text-align: center;
+  }
+  .meText{
+    text-align: center;
+  }
+  .meText p{
+    font-size: 1.3rem;
+    margin: 10px 0 20px 0;
+  }
 }
 
 
 
+
+
+                        /* skills.html styles */                   
+
+.skillsContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.skillBlock{
+    font-size: 1.2rem;
+    }
+.skillBlock h2 i{
+    color: #FD4D4D;
+}
+.skillBlock h2{
+    animation: fadeIn .8s ease-in-out;
+    margin: 30px 0 20px 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  .skillsContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .skillBlock{
+    text-align: center;
+  }
+  .skillBlock li{
+    font-size: 1.3rem;
+    margin: 10px 0 20px 0;
+    list-style: none;
+  }
+}
+
+
+                        /* projects.html styles */                 
