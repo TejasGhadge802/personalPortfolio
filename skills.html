@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tejas's personal portfolio. Showcasing projects, skills, and journey as a frontend developer.">
+    <meta name="keywords" content="Tejas, Frontend Developer, Portfolio, HTML, CSS, JavaScript, Projects">
+    <meta name="author" content="Tejas Ghadge">
+
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <title>Skills</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .cardsContainer {
+            width: 100%;
+            height: 25rem;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+        .cardsTrack {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .cards {
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: 100%;
+            background: linear-gradient(75deg, #82C0D8, #9673F7);
+            color: #000;
+            border: 2px solid black;
+            border-radius: 8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1rem;
+            box-shadow: 10px 10px 20px #35344B80, inset -10px -10px 20px #ffffff33;
+         }
+        .btn {
+            position: absolute;
+            top: 50%;
+            background-color: transparent;
+            color: #4E59DB;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 2;
+            padding: 0 10px;
+            border-radius: 50%;
+        }
+        #btnPre {
+          left: 10px;
+        }
+        #btnNext {
+          right: 10px;
+        }
+        .cards i{
+            padding: 10px;
+            font-size: 5rem;
+        }
+        .cards p:first-of-type{
+            margin: 20px 0px 5px 0px;
+        }
+        .cards .bar{
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 80%;
+        }
+        .cards .progress{
+            background-color: red;
+            width: 85%;
+            height: 4px;
+            border-radius: 5px;
+        }
+        .cardDesc p{
+            margin: 10px;
+        }
+        #htmlCard i{
+            color: #FF0000;
+        }
+        #cssCard i{
+            color: #006DFF;
+        }
+        #cssCard .progress{
+            width: 70%;
+        }
+        #jsCard i{
+            color: #FFF016;
+        }
+        #jsCard .progress{
+            width: 45%;
+        }
+        #pyCard i{
+            color: #294DFF;
+        }
+        #pyCard .progress{
+            width: 80%;
+        }
+        #dbmsCard i{
+            color: #3685F6;
+        }
+        #dbmsCard .progress{
+            width: 50%;
+        }
+        #dsaCard i{
+            color: #294DFF;
+        }
+        #dsaCard .progress{
+            width: 30%;
+        }
+        button:active, button:focus, button:hover {
+            background-color: inherit !important; 
+            outline: none !important;
+        }
+
+
+                    /* Responsive Styles */                        
+        @media (max-width: 1024px) {
+            .cardsContainer {
+                height: 22rem;
+            }
+            .cards {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cardsContainer {
+                height: 20rem;
+                overflow-x: scroll; /* Allow horizontal scroll */
+                scroll-snap-type: x mandatory; /* Smooth snapping */
+                -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+            }
+            .cards {
+                font-size: 0.95rem;
+                border-radius: 10px;
+                flex: 0 0 60%; /* Show partial next card for swipe hint */
+                margin: 0 10px;
+                scroll-snap-align: start;
+            }
+            .cardsTrack {
+                transition: transform 0.5s ease;
+            }
+            .btn {
+                font-size: 1.8rem;
+                display: none;
+            }
+        }
+        @media (max-width: 576px) {
+            .cardsContainer {
+                height: 18rem;
+                overflow-x: scroll; /* Allow horizontal scroll */
+                scroll-snap-type: x mandatory; Smooth snapping
+                -webkit-overflow-scrolling: touch; iOS smooth scroll
+            }
+            .cardsTrack {
+                width: auto;
+            }
+            .cards {
+                flex: 0 0 60%;
+                max-width: 80%;
+                scroll-snap-align: start;
+            }
+            .btn {
+                display: none; Optional: Hide arrows if swipe is good enough
+            }
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="navContainer">
+                <div class="logo"><u>Tejas_80</u></div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="skills">
+            <div class="skillsContainer">
+                <h1><u>My Skills</u></h1>
+
+                <div class="skillBlock">
+                    <h2><i class="fab fa-html5"></i> Frontend Development</h2>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>Responsive Design, Media Queries</li>
+                        <li>Flexbox, Grid, Animations</li>
+                        <li>Basic DOM Manipulation</li>
+                    </ul>
+                </div>
+
+                <div class="skillBlock">
+                    <h2><i class="fas fa-code"></i> Programming</h2>
+                    <ul>
+                        <li>Python (Pydroid 3), C++ (Turbo C++)</li>
+                        <li>DSA – Arrays, Strings, Linked Lists, Trees, Graphs</li>
+                        <li>Problem Solving – Leetcode, Hackathons</li>
+                    </ul>
+                </div>
+
+                <div class="skillBlock">
+                    <h2><i class="fas fa-database"></i> Database & Tools</h2>
+                    <ul>
+                        <li>DBMS (MySQL basics)</li>
+                        <li>Git & GitHub</li>
+                        <li>VS Code, Pydroid, Kali NetHunter</li>
+                    </ul>
+                </div>
+
+                <div class="skillBlock">
+                    <h2><i class="fas fa-brain"></i> Learning & Goals</h2>
+                    <ul>
+                        <li>Currently learning React.js & Tailwind CSS</li>
+                        <li>Exploring AI & Machine Learning basics</li>
+                        <li>Working on a healthcare chatbot using web technologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <section>
+            <div class="cardsContainer">
+                <button class="btn" id="btnPre"><i class="fa-solid fa-backward"></i></button>
+
+                <div class="cardsTrack">
+                    <div id="htmlCard" class="cards">
+                        <h2><b>HTML5</b></h2>
+                        <i class="fab fa-html5"> </i>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >10 Months</p>
+                            <p>"The backbone of all web pages. I use HTML to structure content and ensure semantic clarity for better accessibility and SEO."</p>
+                        </div>
+                    </div>
+                    <div id="cssCard" class="cards">
+                        <i class="fab fa-css3-alt"> </i>
+                        <h2><b>CSS</b></h2>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >9 Months</p>
+                            <p>"Used to design visually appealing, responsive layouts. I enjoy using Flexbox, Grid, and animations to enhance user experience."</p>
+                        </div>
+                    </div>
+                    <div id="jsCard" class="cards">
+                        <i class="fab fa-js-square"> </i>
+                        <h2><b>JavaScript</b></h2>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >5 Months</p>
+                            <p>"I use JavaScript to add interactivity and logic to websites—handling events, manipulating the DOM, and creating dynamic features."</p>
+                        </div>
+                    </div>
+                    <div id="pyCard" class="cards">
+                        <i class="fab fa-python"> </i>
+                        <h2><b>Python</b></h2>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >1 Year</p>
+                            <p>"A versatile language I use for scripting, automation, and understanding the basics of AI/ML. Also used in academic projects."</p>
+                        </div>
+                    </div>
+                    <div id="dbmsCard" class="cards">
+                        <i class="fas fa-database"> </i>
+                        <h2><b>DBMS</b></h2>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >5 Months</p>
+                            <p>"Understanding of how data is stored, retrieved, and organized. I've used SQL to perform CRUD operations in academic projects."</p>
+                        </div>
+                    </div>
+                    <div id="dsaCard" class="cards">
+                        <i class="fas fa-project-diagram"> </i
+                        <h2><b>DSA</b></h2>
+                        <p>Proficiency</p>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="cardDesc">
+                            <p>Experience: >2 Months</p>
+                            <p>"Helps me think logically and solve problems efficiently. I practice DSA regularly to improve coding skills and ace tech interviews."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" id="btnNext"><i class="fa-solid fa-forward"></i></button>
+            </div> 
+        </section>
+    </main>
+    
+
+
+    <footer>
+        <p><i class="fa-regular fa-copyright"> 2025</i></p>
+        <p>Tejas_80.</p>
+        
+        <div id="links">
+            <p><a id="git" href="https://github.com/TejasGhadge802"><i class="fa-brands fa-github"></i></a></p>
+            <p><a id="youtube" href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></p>
+            <p><a id="insta" href="https://www.instagram.com/tejas_ghadge_80"><i class="fa-brands fa-instagram"></i></a></p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script> 
+</body>
+</html>
