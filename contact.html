@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tejas's personal portfolio. Showcasing projects, skills, and journey as a frontend developer.">
+    <meta name="keywords" content="Tejas, Frontend Developer, Portfolio, HTML, CSS, JavaScript, Projects">
+    <meta name="author" content="Tejas Ghadge">
+
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <title>Contact</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #intro{
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 10vw;
+            color: #333232;
+            text-align: justify;
+        }
+        #contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #formContainer {
+            width: 40%;
+            padding: 10px 20px;
+            margin: 20px;
+        }
+        .form-group{
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5rem;
+        }
+        #direct-contact{
+            margin: 15vw;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #direct-contact p{
+            margin: 10px 0;
+        }
+        #direct-contact p i{
+            margin: 5px;
+            transition: transform .3s ease;
+        }
+        #direct-contact p i:hover{
+            transform: scale(1.2) rotate(5deg);
+        }
+        #direct-contact a{
+            text-decoration: none;
+            color: #007bff;
+        }
+        #direct-contact a:hover {
+            text-decoration: underline;
+            color: #5259FF;
+        }
+
+                          /*Animation*/                            
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border: 2px solid #00bcd4;
+            box-shadow: 2px 2px 10px #00bcd4;
+            transition: all 0.3s ease-in-out;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+
+        @media (max-width: 576px){
+            #formContainer{
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="navContainer">
+                <div class="logo"><u>Tejas_80</u></div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1 style="text-align: center; margin: 10px 0 30px 0;">Contact</h1>
+
+        <p id="intro">Have a project in mind or just want to say hello? Whether you're looking to collaborate, hire, or simply connect, I’d love to hear from you! Feel free to drop a message using the form below or reach out via social media. I’ll get back to you as soon as possible!</p>
+
+        <section id="contact-section">
+            <div id="formContainer">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit"><b>Send Message</b></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="direct-contact">
+            <h2 style="margin-bottom: 10px;">Get in Touch Directly</h2>
+            <p><i class="fa-solid fa-envelope"></i><a href="mailto:ghadgetejas80@gmail.com">ghadgetejas80@gmail.com</a></p>
+            <p><i id="linkedin" class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/tejas-ghadge" target="_blank">Tejas Ghadge</a></p>
+            <p><i id="git" class="fa-brands fa-github"></i><a href="https://github.com/TejasGhadge802" target="_blank">TejasGhadge802</a></p>
+            <p><i id="" class="fa-solid fa-location-dot"></i>  Mumbai, India</p>
+        </section>
+
+        <iframe id="map" style="border: 3px solid black;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.123456789!2d72.9350000!3d19.0540000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c123456789ab%3A0xabcdef1234567890!2sMohite%20Patil%20Nagar%2C%20Govandi%20East%2C%20Mumbai%2C%20Maharashtra%20400043!5e0!3m2!1sen!2sin!4v1682487534201!5m2!1sen!2sin" 
+            width="100%"
+            height="500"
+            style="border:0;"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </main>
+
+    <footer>
+        <p><i class="fa-regular fa-copyright"> 2025</i></p>
+        <p><b>Tejas_80.</b></p>
+        
+        <div id="links">
+            <p><a id="git" href="https://github.com/TejasGhadge802"><i class="fa-brands fa-github"></i></a></p>
+            <p><a id="linkedin" href="https://www.linkedin.com/in/tejas-ghadge"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p><a id="insta" href="https://www.instagram.com/tejas_ghadge_80"><i class="fa-brands fa-instagram"></i></a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script> 
+</body>
+</html>

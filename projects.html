@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tejas's personal portfolio. Showcasing projects, skills, and journey as a frontend developer.">
+    <meta name="keywords" content="Tejas, Frontend Developer, Portfolio, HTML, CSS, JavaScript, Projects">
+    <meta name="author" content="Tejas Ghadge">
+
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <title>Projects</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        #projectsContainer{
+            margin: 10px;
+            background-color: ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .projectsCards{
+            background-color: #959595;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #9B6CCE;
+            position: relative;
+            z-index: 90;
+            transition: all 0.3s ease; 
+        }
+        .projectsCards p:hover{
+            color: #ffffff;
+            text-shadow: 0 0 5px #9B6CCE, 0 0 10px #9B6CCE, 0 0 20px #9B6CCE;
+            transition: all 0.3s ease-in-out;
+        }
+        .projectsCards:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(155, 108, 206, 0.9);
+        }
+        .projectsCards img{
+            margin: 10px;
+            width: 10em;
+            height: 10em;
+            object-fit: contain;
+        }
+        .projectsCards p{
+            margin: 5px;
+        }
+        .name{
+            font-weight: bolder;
+        }
+        .name{
+        color: #ffffff;
+        text-shadow: 0 0 10px #740AC1, 0 0 20px #740AC1, 0 0 40px #740AC1;
+        }
+        .projectBtn{
+            background-color: ;
+            margin: 5px;
+            height: 2em;
+            padding: 5px;
+            font-weight: bold;
+            color: #B73AFF;
+            cursor: pointer;
+        }
+        .projectBtn a, #moreBtn a{
+            text-decoration: none;
+        }
+        #moreBtn{
+            margin: 5px;
+            height: 2em;
+            padding: 5px;
+            font-weight: bold;
+            color: #B73AFF;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="navContainer">
+                <div class="logo"><u>Tejas_80</u></div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1 style="text-align: center; margin: 10px 0 30px 0;">Project</h1>
+
+        <h1 style="text-align: center; margin-bottom: 10px;">"Projects I've Built"</h1>
+        <h4 style="text-align: center;">"Here are some projects showcasing my skills in frontend development, programming, and AI/ML."</h4>
+
+
+        <section id="projectsContainer">
+            <div class="projectsCards" id="personalPortfolio">
+                <img src="/Images/portfolioPro.jpg">
+                <p class="name">Personal Portfolio</p>
+                <p class="desc">"A clean and modern portfolio website highlighting my web development skills, technical knowledge, and professional journey. Focused on simplicity, accessibility, and creativity."</p>
+                <p><b>Teck Stack: </b>HTML5, CSS3, JAVASCRIPT(Vanilla js).</p>
+                <button class="projectBtn" id="liveBtn"><a href="https://tejasghadge802.github.io/personalPortfolio/">Visit Site</a></button>
+                <button class="projectBtn" id="codeBtn"><a href="https://github.com/TejasGhadge802/personalPortfolio">Get code</a></button>
+            </div>
+
+            <div class="projectsCards in" id="apnaDoctor">
+                <img src="/Images/doctorPro.jpg">
+                <p class="name">Apna Doctor 2</p>
+                <p class="desc">"Apna Doctor is a smart healthcare chatbot designed to assist users in early disease detection, health queries, and doctor consultations. It provides personalized responses based on user symptoms, preventive health tips, and helps connect patients to healthcare professionals. The chatbot aims to make healthcare advice more accessible, instant, and reliable."</p>
+                <p><b>Teck Stack: </b>HTML5, CSS3, JavaScript (Vanilla JS), Python.</p>
+                <button class="projectBtn" id="liveBtn"><a href="https://tejasghadge802.github.io/ApnaDoctor2.0/">Visit Site</a></button>
+                <button class="projectBtn" id="codeBtn"><a href="https://github.com/TejasGhadge802/ApnaDoctor2.0">Get code</a></button>
+            </div>
+
+            <div class="projectsCards" id="pyWeather">
+                <img src="/Images/weatherPyPro.jpg">
+                <p class="name">Weather Program Python</p>
+                <p class="desc">"Check the weather instantly! This Python app lets you enter any city and shows live temperature, conditions, humidity, and more using OpenWeatherMap."</p>
+                <p><b>Teck Stack: </b>Python</p>
+                <button class="projectBtn" id="codeBtn"><a href="https://github.com/TejasGhadge802/WeatherAppPy">Get code</a></button>
+            </div>
+
+            <div class="projectsCards">
+                <img src="/Images/weatherAppPro.jpg">
+                <p class="name">Weather Application</p>
+                <p class="desc">"A clean and responsive Weather App built with HTML, CSS, and JavaScript. Instantly fetch real-time weather updates for any city with a simple click!"</p>
+                <p><b>Teck Stack: </b>HTML5, CSS3, JavaScript, OpenWeatherMap API.</p>
+                <button class="projectBtn" id="liveBtn"><a href="https://tejasghadge802.github.io/Weather_app/">Visit Site</a></button>
+                <button class="projectBtn" id="codeBtn"><a href="https://github.com/TejasGhadge802/Weather_app">Get Code</a></button>
+            </div>
+        </section>
+        
+        <p style="text-align: center;"><button id="moreBtn"><a href="https://github.com/TejasGhadge802?tab=repositories">Seem More</a></button></p>
+    </main>
+    
+
+
+    <footer>
+        <p><i class="fa-regular fa-copyright"> 2025</i></p>
+        <p><b>Tejas_80.</b></p>
+        
+        <div id="links">
+            <p><a id="git" href="https://github.com/TejasGhadge802"><i class="fa-brands fa-github"></i></a></p>
+            <p><a id="linkedin" href="https://www.youtube.com"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p><a id="insta" href="https://www.instagram.com/tejas_ghadge_80"><i class="fa-brands fa-instagram"></i></a></p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script> 
+</body>
+</html>
