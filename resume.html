@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tejas's personal portfolio. Showcasing projects, skills, and journey as a frontend developer.">
+    <meta name="keywords" content="Tejas, Frontend Developer, Portfolio, HTML, CSS, JavaScript, Projects">
+    <meta name="author" content="Tejas Ghadge">
+
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <title>Resume</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .intro{
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 10vw;
+            color: #333232;
+            text-align: justify;
+        }
+        .me{
+            margin: 5vw; 
+            color: #1C1B1B;
+        }
+        .topic{
+            margin: 3vh 3vw;
+            line-height: 1.5;
+        }
+        .title{
+            font-size: 2rem; 
+            font-weight: 900;
+        }
+        .da{
+            font-size: 1.8rem;
+        }
+        .da a{
+            text-decoration: none;
+        }
+
+        @media (max-width: 576px) {
+            .intro{
+                font-size: 1.5rem;
+            }
+            .title{
+                font-size: 1.5rem;
+            }
+            .da{
+                font-size: 1rem;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="navContainer">
+                <div class="logo"><u>Tejas_80</u></div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <p class="intro">To present my skills, education, experience, and projects in a clear and organized layout for recruiters or collaborators.
+        </p>
+
+        <h2 class="intro me">
+            “I am a Computer Science student with a strong interest in software development and modern technologies. Passionate about building innovative solutions, I am currently enhancing my skills in web development, programming, and problem-solving. Eager to contribute to real-world tech projects and gain hands-on experience through internship opportunities that foster continuous learning and growth.”
+        </h2>
+
+        <div class="topic">
+            <h3 class="title"><u>Education</u></h3>
+            <p class="da" style="font-weight: 700;">Bachelor of Science in Computer Science</p>
+            <pre class="da">Mumbai University
+Pursuing – First Year Student (2024–Present)
+            </pre>  
+        </div>
+
+        <div class="topic">
+            <h3 class="title"><u>Skills</u></h3>
+            <p class="da"><b>Languages</b>: Python, C++</p>
+            <p class="da"><b>Frontend</b>: HTML, CSS, JavaScript, React</p>
+            <p class="da"><b>Database</b>: SQL</p>
+            <p class="da"><b>Tools</b>: Git, Figma, VS Code</p>
+            <p class="da"><b>Soft Skills</b>: Problem-Solving, Creative, Curious, Team-Work, Time-Management</p>
+        </div>
+
+        <div class="topic">
+            <h3 class="title"><u>Projects</u></h3>
+            <p class="da">Explore a curated selection of my hands-on projects that showcase my skills in frontend development, UI design, and problem-solving. From interactive cards to responsive layouts, each project reflects my learning journey and practical application of technologies like HTML, CSS, and JavaScript.<a href="projects.html">View Projects</a></p>
+        </div>
+
+        <div class="topic">
+            <h3 class="title"><u>Resume</u></h3>
+            <p class="da">Download my resume to learn more about my academic background, technical skills, and projects. <a href="/Images/resume.pdf" download="/Images/resume.pdf" target="_blank">Download Resume</a></p>
+        </div>
+    </main>
+    
+
+
+    <footer>
+        <p><i class="fa-regular fa-copyright"> 2025</i></p>
+        <p><b>Tejas_80.</b></p>
+        
+        <div id="links">
+            <p><a id="git" href="https://github.com/TejasGhadge802"><i class="fa-brands fa-github"></i></a></p>
+            <p><a id="linkedin" href="https://www.youtube.com"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p><a id="insta" href="https://www.instagram.com/tejas_ghadge_80"><i class="fa-brands fa-instagram"></i></a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script> 
+</body>
+</html> 
